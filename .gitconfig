@@ -2,7 +2,7 @@
 	name = Evan Lucas
 	email = evanlucas@me.com
 [core]
-	excludesfile = /Users/elucas/.gitignore
+	excludesfile = ~/.gitignore
 	editor = vim
 [merge]
 	tool = vimdiff

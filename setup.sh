@@ -6,6 +6,7 @@ create_bash_dirs() {
   print_info "creating bash dirs..."
   mkdir -p ~/bin/bash
 }
+
 setup_mac() {
   print_info "modifying default finder settings..."
   defaults write com.apple.finder ShowStatusBar 1
