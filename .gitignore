@@ -1,0 +1,21 @@
+.DS_Store
+.Trashes
+*.swp
+*.o
+
+# Xcode stuff
+DerivedData
+*.pbxuser
+*.mode1v3
+*.mode2v3
+!default.pbxuser
+!default.mode1v3
+!default.mode2v3
+xcuserdata
+*.perspectivev3
+!default.perspectivev3
+Pods
+
+# Node.js
+node_modules
+npm-debug.log

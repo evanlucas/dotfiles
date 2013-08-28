@@ -1,0 +1,18 @@
+[user]
+	name = Evan Lucas
+	email = evanlucas@me.com
+[core]
+	excludesfile = /Users/elucas/.gitignore
+	editor = vim
+[merge]
+	tool = vimdiff
+[color]
+	status = auto
+	branch = auto
+	interactive = auto
+	diff = auto
+	ui = true
+[https]
+	sslVerify = false
+[push]
+	default = simple
