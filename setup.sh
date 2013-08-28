@@ -18,6 +18,7 @@ setup_mac() {
   defaults write com.apple.finder FXPreferredViewStyle clmv
   create_bash_dirs
   print_info "symlinking bash files..."
+  ln -fs ~/dev/dotfiles/bash/.bash_profile ~/.bash_profile
   ln -fs ~/dev/dotfiles/bash/* ~/bin/bash
   print_info "getting rid of parallels ads...thanks @chronic"
   defaults write com.parallels.Parallels\ Desktop ProductPromo.ForcePromoOff -bool YES

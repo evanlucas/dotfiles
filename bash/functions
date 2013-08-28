@@ -1,5 +1,11 @@
 #!/bin/bash
-source ~/bin/bash/colors
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+if [[ ! -f ~/bin/bash/colors ]]; then
+	source "$DIR"/colors
+else
+	source ~/bin/bash/colors
+fi
+
 print_error() {
 	echo -ne "${RED_FG}${BOLD}error: ${RESET}  "
 	echo -n "$@"
