@@ -9,13 +9,27 @@ create_bash_dirs() {
 
 setup_mac() {
   print_info "modifying default finder settings..."
-  defaults write com.apple.finder ShowStatusBar 1
+  print_info "Show status bar"
+	defaults write com.apple.finder ShowStatusBar 1
+	print_info "Show path bar"
   defaults write com.apple.finder ShowPathBar 1
+	print_info "Show external drives on desktop"
   defaults write com.apple.finder ShowExternalHardDrivesOnDesktop 1
+	print_info "Don't show hard drives on desktop"
   defaults write com.apple.finder ShowHardDrivesOnDesktop 0
+	print_info "Don't show mounted servers on desktop"
   defaults write com.apple.finder ShowMountedServersOnDesktop 0
+	print_info "Show removable media on desktop"
   defaults write com.apple.finder ShowRemovableMediaOnDesktop 1
+	print_info "Default to column layout"
   defaults write com.apple.finder FXPreferredViewStyle clmv
+	print_info "Disable dashboard"
+	defaults write com.apple.dashboard mcx-disabled -boolean YES # Disable dashboard
+	print_info "Enable tap to click"
+	defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking 1
+	print_info "Enable three finger drag"
+	defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag 1
+	killall Dock
   create_bash_dirs
   print_info "symlinking bash files..."
   ln -fs ~/dev/dotfiles/bash/.bash_profile ~/.bash_profile
