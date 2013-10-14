@@ -16,3 +16,7 @@
 	sslVerify = false
 [push]
 	default = simple
+[alias]
+	c = commit
+	s = status
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
