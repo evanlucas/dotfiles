@@ -82,3 +82,4 @@ function! HasPaste()
     return ''
 endfunction
 
+autocmd FileType make setlocal noexpandtab
