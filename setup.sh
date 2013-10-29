@@ -36,6 +36,10 @@ setup_mac() {
   ln -fs ~/dev/dotfiles/bash/* ~/bin/bash
   print_info "getting rid of parallels ads...thanks @chronic"
   defaults write com.parallels.Parallels\ Desktop ProductPromo.ForcePromoOff -bool YES
+  if [[ -d "/Applications/Coda\ 2.app" ]]; then
+    print_info "copying coda 2 theme"
+    ln ~/dev/dotfiles/other/NightLion.sss ~/Library/Application\ Support/Coda\ 2/Styles/
+  fi
 }
 
 setup_ubuntu() {
