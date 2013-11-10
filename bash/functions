@@ -12,7 +12,7 @@ print_error() {
 	echo ""
 }
 print_info() {
-	echo -ne "${GREEN_FG}${BOLD}info: ${RESET}"
+	echo -ne "${GREEN_DARK_FG}${BOLD}info: ${RESET}"
 	echo -n "$@"
 	echo ""
 }

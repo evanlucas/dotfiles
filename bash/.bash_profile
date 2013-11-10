@@ -19,4 +19,6 @@ if [ -x /usr/bin/dircolors ]; then
 	alias ls='ls --color=auto'
 fi
 
-
+if [[ -f $HOME/bin/bash/extras ]]; then
+	source $HOME/bin/bash/extras
+fi
