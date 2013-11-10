@@ -7,24 +7,24 @@ else
 fi
 
 print_error() {
-	echo -ne "${RED_FG}${BOLD}error: ${RESET}  "
+	echo -ne "${RED_FG}${BOLD}error: ${RESET}"
 	echo -n "$@"
 	echo ""
 }
 print_info() {
-	echo -ne "${GREEN_FG}${BOLD}info: ${RESET}   "
+	echo -ne "${GREEN_FG}${BOLD}info: ${RESET}"
 	echo -n "$@"
 	echo ""
 }
 print_debug() {
 	if [[ "$VERBOSE" == "verbose" ]]; then
-		echo -ne "${MAGENTA_FG}${BOLD}debug: ${RESET}  "
+		echo -ne "${MAGENTA_FG}${BOLD}debug: ${RESET}"
 		echo -n "$@"
 		echo ""
 	fi
 }
 print_warning() {
-	echo -ne "${YELLOW_FG}${BOLD}warn: ${RESET}   "
+	echo -ne "${YELLOW_FG}${BOLD}warn: ${RESET}"
 	echo -n "$@"
 	echo ""
 }
