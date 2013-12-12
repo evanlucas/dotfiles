@@ -12,7 +12,7 @@ print_error() {
 	echo ""
 }
 print_info() {
-	echo -ne "${GREEN_DARK_FG}${BOLD}info: ${RESET}"
+	echo -ne "${GREEN_FG}${BOLD}info: ${RESET}"
 	echo -n "$@"
 	echo ""
 }
@@ -28,34 +28,6 @@ print_warning() {
 	echo -n "$@"
 	echo ""
 }
-printError() {
-	echo -e "${RED_FG}[ERROR] - $@"
-	echo -ne "${RESET}"
-}
-printWarning() {
-	echo -e "${YELLOW_FG}[WARNING] - $1"
-	echo -ne "${RESET}"
-}
-printInfo() {
-	echo -e "${CYAN_FG}[INFO] - $1"
-	echo -ne "${RESET}"
-}
-printNotice() {
-	echo -e "${MAGENTA_FG}[NOTICE] - $1"
-	echo -ne "${RESET}"
-}
-
-killbyname() {
-	if [[ ! "$1" ]]; then
-		printError "No PID given"
-	fi
-	printNotice "Trying to kill process like $1"
-	if [[ ! -z $(ps ax | grep -v grep | grep "$1") ]]; then
-		kill -9 $(ps ax | grep -v grep | grep "$1" | awk '{print $1}')
-	else
-		printWarning "$1 is not running"
-	fi
-}
 
 parse_git_branch() {
 	if git rev-parse --git-dir >/dev/null 2>&1; then
@@ -63,14 +35,6 @@ parse_git_branch() {
 	else
 		return 0
 	fi
-	echo -e "[git::$br] "
+	echo -e "[$br] "
 }
 
-parse_fossil_branch() {
-	if fossil branch >/dev/null 2>&1; then
-		br=$(fossil branch 2>/dev/null | sed -n '/^\*/s/^\* //p')
-	else
-		return 0
-	fi
-	echo -e "[fossil:$br] "
-}
