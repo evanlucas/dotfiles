@@ -7,7 +7,7 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 PS1='
 \[${CYAN_FG}\][\[${MAGENTA_FG}\]\u@\h\[${CYAN_FG}\]]\[${RESET}\]
 \[${RED_FG}\][\[${GREEN_FG}\]\w\[${RED_FG}\]]
-\[${MAGENTA_FG}\]:]\[${RESET}\] \[${CYAN_FG}\]=>\[${RESET}\] \[${MAGENTA_FG}\]$(parse_git_branch)\[${MAGENTA_FG}\]$(parse_fossil_branch)\[${RESET}\] $ '
+\[${MAGENTA_FG}\]:]\[${RESET}\] \[${CYAN_FG}\]=>\[${RESET}\] \[${MAGENTA_FG}\]$(parse_git_branch)\[${RESET}\]$ '
 export CODE=$HOME/dev/code
 export NODE_PATH=:/usr/local/lib/node_modules
 alias ks="ls"
@@ -22,3 +22,5 @@ fi
 if [[ -f $HOME/bin/bash/extras ]]; then
 	source $HOME/bin/bash/extras
 fi
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
