@@ -61,6 +61,16 @@ setup_other() {
   echo ". ~/.profile" >> ~/.bashrc
 }
 
+setup_smartos() {
+  create_bash_dirs
+  print_info "symlinking bash files..."
+  echo "set backspace=indent,eol,start" >> ~/.vimrc
+  ln -fs ~/dev/dotfiles/bash/.bash_profile ~/.profile
+  ln -fs ~/dev/dotfiles/bash/function ~/bin/bash/functions
+  ln -fs ~/dev/dotfiles/bash/colors ~/bin/bash/colors
+  echo ". ~/.profile" >> ~/.bashrc
+}
+
 if [[ ! -d ~/dev/dotfiles ]]; then
 	print_error "Invalid location...aborting"
 	exit
@@ -69,9 +79,12 @@ fi
 print_info "symlinking vim files..."
 ln -fs ~/dev/dotfiles/.vim* ~/
 
+U=$(uname)
 
-if [[ $(uname) == "Darwin" ]]; then
+if [[ "$U" == "Darwin" ]]; then
 	setup_mac
+elif [[ "$U" == "SunOS" ]]; then
+  setup_smartos
 elif [[ $(lsb_release -i -s) == "elementary OS" ]]; then
   setup_ubuntu
 elif [[ $(lsb_release -i -s) == "Ubuntu" ]]; then
