@@ -14,8 +14,6 @@
 	ui = true
 [https]
 	sslVerify = false
-[push]
-	default = simple
 [alias]
 	c = commit
 	s = status
