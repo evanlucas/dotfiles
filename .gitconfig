@@ -23,3 +23,6 @@
   cl = clone
   br = branch
   dc = diff --cached
+
+[help]
+	autocorrect = 1
