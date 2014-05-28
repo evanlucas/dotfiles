@@ -66,7 +66,7 @@ setup_smartos() {
   print_info "symlinking bash files..."
   echo "set backspace=indent,eol,start" >> ~/.vimrc
   ln -fs ~/dev/dotfiles/bash/.bash_profile ~/.profile
-  ln -fs ~/dev/dotfiles/bash/function ~/bin/bash/functions
+  ln -fs ~/dev/dotfiles/bash/functions ~/bin/bash/functions
   ln -fs ~/dev/dotfiles/bash/colors ~/bin/bash/colors
   echo ". ~/.profile" >> ~/.bashrc
 }
