@@ -1,6 +1,6 @@
 [user]
 	name = Evan Lucas
-	email = evan.lucas@hattiesburgclinic.com
+	email = evanlucas@me.com
 [core]
 	excludesfile = ~/.gitignore
 	editor = vim
