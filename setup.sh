@@ -29,6 +29,8 @@ setup_mac() {
 	defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking 1
 	print_info "Enable three finger drag"
 	defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag 1
+  print_info "Enable status bar in Safari"
+  defaults write com.apple.Safari ShowStatusBar 1
 	killall Dock
   create_bash_dirs
   print_info "symlinking bash files..."
