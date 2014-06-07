@@ -17,11 +17,10 @@
   s = status
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   st = status -sb
-  fup = log --since '1 day ago' --oneline --author "evan.lucas@hattiesburgclinic.com"
+  fup = log --since '1 day ago' --oneline --author "evanlucas@me.com"
   cl = clone
   br = branch
   dc = diff --cached
-
 [help]
   autocorrect = 1
 [filter "media"]
