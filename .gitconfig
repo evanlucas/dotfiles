@@ -1,23 +1,21 @@
 [user]
-	name = Evan Lucas
-	email = evan.lucas@hattiesburgclinic.com
+  name = Evan Lucas
+  email = evanlucas@me.com
 [core]
-	excludesfile = ~/.gitignore
-	editor = vim
+  excludesfile = ~/.gitignore
+  editor = vim
 [merge]
-	tool = vimdiff
+  tool = vimdiff
 [color]
-	status = auto
-	branch = auto
-	interactive = auto
-	diff = auto
-	ui = true
-[https]
-	sslVerify = false
+  status = auto
+  branch = auto
+  interactive = auto
+  diff = auto
+  ui = true
 [alias]
-	c = commit
-	s = status
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  c = commit
+  s = status
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   st = status -sb
   fup = log --since '1 day ago' --oneline --author "evan.lucas@hattiesburgclinic.com"
   cl = clone
@@ -25,7 +23,7 @@
   dc = diff --cached
 
 [help]
-	autocorrect = 1
+  autocorrect = 1
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+  clean = git-media-clean %f
+  smudge = git-media-smudge %f
