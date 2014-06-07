@@ -13,7 +13,7 @@ export NODE_PATH=:/usr/local/lib/node_modules
 alias ks="ls"
 alias l="ls"
 alias ..="cd .."
-export GIT_USE_HTTPS='true'
+
 if [ -x /usr/bin/dircolors ]; then
 	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 	alias ls='ls --color=auto'
@@ -23,3 +23,5 @@ if [[ -f $HOME/bin/bash/extras ]]; then
 	source $HOME/bin/bash/extras
 fi
 
+export HISTSIZE=2500
+export HISTFILESIZE=10000
