@@ -85,3 +85,5 @@ endfunction
 autocmd FileType make setlocal noexpandtab
 
 au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
+
+set backspace=indent,eol,start
