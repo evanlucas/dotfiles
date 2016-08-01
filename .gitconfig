@@ -15,12 +15,18 @@
 [alias]
   c = commit
   s = status
+  pm = pull -r origin master
+  pu = pull -r upstream master
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   st = status -sb
   fup = log --since '1 day ago' --oneline --author "evanlucas@me.com"
-  cl = clone
-  br = branch
+  br = checkout -b
   dc = diff --cached
+	lastchange = log -p --follow -n 1
+  #patchit = "!f() { curl -L $1.patch | git am --whitespace=fix; }; f"
+  patchit = "!f() { echo $1.patch | sed s_pull/[1-9]*/commits_commit_ | xargs curl -L | git am --whitespace=fix; }; f"
+  #patchit-please = "!f() { curl -L $1.patch | git am -3 --whitespace=fix; }; f"
+  patchit-please = "!f() { echo $1.patch | sed s_pull/[1-9]*/commits_commit_ | xargs curl -L | git am -3 --whitespace=fix; }; f"
 [help]
   autocorrect = 1
 [filter "media"]
