@@ -1,11 +1,13 @@
 [user]
-  name = Evan Lucas
-  email = evanlucas@me.com
+	name = Evan Lucas
+	email = evanlucas@me.com
+	signingkey = 4C206CA9
 [core]
   excludesfile = ~/.gitignore
   editor = vim
 [merge]
   tool = vimdiff
+	conflictstyle = diff3
 [color]
   status = auto
   branch = auto
@@ -33,9 +35,10 @@
   clean = git-media-clean %f
   smudge = git-media-smudge %f
 [filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
 	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 [push]
 	default = simple
 	followTags = true
